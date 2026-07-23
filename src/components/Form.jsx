@@ -21,7 +21,8 @@ export default function Form({ setEmployees }) {
 
         setEmployees((prevEmployees) => [newEmployee, ...prevEmployees]);
 
-        console.log(newEmployee);
+        setName('')
+        setTitle('')
     }
 
     return (

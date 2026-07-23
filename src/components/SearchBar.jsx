@@ -1,11 +1,13 @@
 function SearchBar({ filterText, setFilterText }) {
 
     return (
-        <input 
-            type="text" 
-            value={filterText}
-            onChange={(e) => setFilterText(e.target.value)}
-        />
+        <div className="searchbar">
+            <input
+                type="text"
+                value={filterText}
+                onChange={(e) => setFilterText(e.target.value)}
+            />
+        </div>
     )
 }
 
