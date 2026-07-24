@@ -4,7 +4,11 @@ import './App.css'
 
 import HomePage from './pages/HomePage'
 import Form from './components/Form'
+import EmployeePage from './pages/EmployeePage'
+
 import { randomPhoto } from './utils/helper';
+
+import { Routes, Route } from 'react-router';
 
 import { id } from './utils/helper';
 
@@ -29,7 +33,7 @@ function App() {
 
       setEmployees(existingEmployees);
 
-    } catch(e) {
+    } catch (e) {
       console.log(e)
     }
   }
@@ -39,12 +43,18 @@ function App() {
   }, [])
 
   return (
-   <div className='app'>
-      <HomePage 
-        employees={employees} 
-        setEmployees={setEmployees} 
-      />
-   </div>
+    <div className='app'>
+      <Routes>
+        <Route path="/" element={
+          <HomePage
+            employees={employees}
+            setEmployees={setEmployees}
+          />
+        }
+        />
+        <Route path="/employee" element={<EmployeePage />} />
+      </Routes>
+    </div>
   )
 }
 
