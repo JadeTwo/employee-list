@@ -52,7 +52,7 @@ function App() {
           />
         }
         />
-        <Route path="/employee" element={<EmployeePage />} />
+        <Route path="/employee/:id" element={<EmployeePage />} />
       </Routes>
     </div>
   )

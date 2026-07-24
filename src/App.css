@@ -71,11 +71,23 @@ dialog {
 }
 
 header span {
-    color: lightblue;
-    position: relative;
-    right: 50px;
+    position: absolute;
+    left: 5%;
+}
+
+header {
+    width: 100%;
+}
+
+.employee-page {
+    width: 100%;
 }
 
 ul li {
     cursor: pointer;
+}
+
+header a {
+    text-decoration: none;
+    color: lightblue;
 }

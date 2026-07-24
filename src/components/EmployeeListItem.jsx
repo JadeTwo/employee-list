@@ -5,7 +5,7 @@ function EmployeeListItem({ employee }) {
     const navigate = useNavigate();
 
     return (
-        <li onClick={() => navigate("/employee")}>
+        <li onClick={() => navigate(`/employee/${employee.id}`)}>
             <img src={employee.headshot} alt="" />
             <div>
                 <p>{employee.name}</p>
