@@ -2,7 +2,7 @@ import { useParams } from "react-router"
 
 import Header from "../components/Header"
 
-export default function EmployeePage() {
+export default function EmployeePage({ employees }) {
 
     const { id } = useParams();
 
