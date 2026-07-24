@@ -8,7 +8,7 @@ import EmployeePage from './pages/EmployeePage'
 
 import { randomPhoto } from './utils/helper';
 
-import { Routes, Route } from 'react-router';
+import { Routes, Route, Navigate } from 'react-router';
 
 import { id } from './utils/helper';
 
@@ -60,6 +60,7 @@ function App() {
             />
           } 
         />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
   )
