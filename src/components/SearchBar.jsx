@@ -5,6 +5,7 @@ function SearchBar({ filterText, setFilterText }) {
             <input
                 type="text"
                 value={filterText}
+                placeholder="search"
                 onChange={(e) => setFilterText(e.target.value)}
             />
         </div>

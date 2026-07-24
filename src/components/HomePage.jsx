@@ -1,10 +1,11 @@
 import EmployeeList from "./EmployeeList"
 import Header from "./Header"
 import SearchBar from "./SearchBar"
+import AddEmployee from "./AddEmployee"
 
 import { useState } from "react"
 
-function HomePage({ employees }) {
+function HomePage({ employees, setEmployees }) {
 
     const [filterText, setFilterText] = useState('')
 
@@ -14,6 +15,9 @@ function HomePage({ employees }) {
             <SearchBar 
                 filterText={filterText} 
                 setFilterText={setFilterText} 
+            />
+            <AddEmployee 
+                setEmployees={setEmployees} 
             />
             <EmployeeList 
                 employees={employees} 

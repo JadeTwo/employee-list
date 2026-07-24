@@ -1,28 +1,33 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { randomPhoto, generateId } from "../utils/helper";
 
-export default function Form({ setEmployees }) {
+export default function Form({ setEmployees, setShow }) {
 
     const [name, setName] = useState('');
     const [title, setTitle] = useState('');
 
+
+
     function handleSubmit(e) {
         e.preventDefault();
 
-        const newEmployee = {
-            id: generateId(),
-            headshot: randomPhoto(),
-            name: name,
-            title: title,
-            email: null,
-            phone: null
-        };
+        if (name && title) {
+            const newEmployee = {
+                id: generateId(),
+                headshot: randomPhoto(),
+                name: name,
+                title: title,
+                email: null,
+                phone: null
+            };
 
-        setEmployees((prevEmployees) => [newEmployee, ...prevEmployees]);
+            setEmployees((prevEmployees) => [newEmployee, ...prevEmployees]);
+        }
 
         setName('')
         setTitle('')
+        setShow(false)
     }
 
     return (
@@ -31,21 +36,21 @@ export default function Form({ setEmployees }) {
 
             <label htmlFor="name">Name</label>
 
-            <input 
-                type="text" id="name" 
+            <input
+                type="text" id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
 
             <label htmlFor="title">Title</label>
-            <input 
-                type="text" 
-                id="title" 
+            <input
+                type="text"
+                id="title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
-            
-            <button>Submit</button>
+
+            <button>{name && title ? 'Submit' : 'Close'}</button>
         </form>
     )
 }

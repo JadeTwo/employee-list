@@ -1,6 +1,6 @@
 function EmployeeListItem({ employee }) {
     return (
-        <li key={employee.phone}>
+        <li>
             <img src={employee.headshot} alt="" />
             <div>
                 <p>{employee.name}</p>
