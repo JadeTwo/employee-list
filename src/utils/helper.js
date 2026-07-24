@@ -5,7 +5,7 @@ function random(max) {
 }
 
 export function randomPhoto() {
-    return `../images/headshot${random(12)}.jpeg`
+    return `/images/headshot${random(12)}.jpeg`
 }
 
 export function generateId() {
@@ -15,7 +15,7 @@ export function generateId() {
 
 export function formatEmail(name) {
     const emails = ['gmail', 'hotmail', 'aol', 'yahoo']
-    return `name${random(10) + random(10)}@${emails[random(4)]}.com`
+    return `${name}${random(10) + random(10)}@${emails[random(4)]}.com`
 }
 
 export function randomPhoneNumber() {
