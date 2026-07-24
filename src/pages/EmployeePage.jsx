@@ -1,12 +1,18 @@
-import { useParams } from "react-router"
+import { useParams, useNavigate } from "react-router"
 
 import Header from "../components/Header"
+import { useEffect } from "react";
 
 export default function EmployeePage({ employees }) {
 
     const { id } = useParams();
+    const navigate = useNavigate()
 
     const employee = employees.find((e) => e.id === Number(id))
+
+    useEffect(() => {
+        if (!employee) navigate('/')
+    }, [])
 
     if (!employee) return <></>
 
