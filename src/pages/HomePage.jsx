@@ -11,7 +11,7 @@ function HomePage({ employees, setEmployees }) {
 
     return (
         <div className="homepage">
-            <Header />
+            <Header text="Employee Directory" />
             <SearchBar 
                 filterText={filterText} 
                 setFilterText={setFilterText} 

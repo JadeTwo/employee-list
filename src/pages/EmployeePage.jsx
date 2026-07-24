@@ -1,7 +1,9 @@
+import Header from "../components/Header"
+
 export default function EmployeePage() {
     return (
-        <div>
-            Employee Page
+        <div className="employee-page">
+            <Header text="Employee" />
         </div>
     )
 }

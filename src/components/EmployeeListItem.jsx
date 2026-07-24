@@ -1,6 +1,11 @@
+import { Link, useNavigate } from "react-router"
+
 function EmployeeListItem({ employee }) {
+
+    const navigate = useNavigate();
+
     return (
-        <li>
+        <li onClick={() => navigate("/employee")}>
             <img src={employee.headshot} alt="" />
             <div>
                 <p>{employee.name}</p>

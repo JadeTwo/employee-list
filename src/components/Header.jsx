@@ -1,7 +1,9 @@
-function Header() {
+import { Link } from "react-router"
+
+function Header({ text }) {
     return (
         <header>
-            <h1>Employee Directory</h1>
+            <h1>{text === "Employee" && <span><Link to="/">{"<"}</Link></span>}{text}</h1>
         </header>
     )
 }

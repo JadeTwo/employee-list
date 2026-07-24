@@ -69,3 +69,13 @@ form button {
 dialog {
   padding-top: 5px;
 }
+
+header span {
+    color: lightblue;
+    position: relative;
+    right: 50px;
+}
+
+ul li {
+    cursor: pointer;
+}
