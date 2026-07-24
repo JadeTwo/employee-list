@@ -1,7 +1,7 @@
-import EmployeeList from "./EmployeeList"
-import Header from "./Header"
-import SearchBar from "./SearchBar"
-import AddEmployee from "./AddEmployee"
+import EmployeeList from "../components/EmployeeList"
+import Header from "../components/Header"
+import SearchBar from "../components/SearchBar"
+import AddEmployee from "../components/AddEmployee"
 
 import { useState } from "react"
 

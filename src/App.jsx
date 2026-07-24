@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import './App.css'
 
-import HomePage from './components/HomePage'
+import HomePage from './pages/HomePage'
 import Form from './components/Form'
 import { randomPhoto } from './utils/helper';
 
