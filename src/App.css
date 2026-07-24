@@ -95,13 +95,24 @@ header a {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
 .profile {
     display: flex;
     justify-content: space-around;
-    width: 200px;
+    align-items: center;
+}
+
+.profile > div > div {
+    margin-left: 10px;
+    font-weight: bolder;
+}
+
+.profile > div > div:last-child {
+    color: grey;
+    font-weight: normal;
+    opacity: .6;
 }
 
 .profile img {
@@ -110,5 +121,15 @@ header a {
     height: 150px;
 }
 
-.profile > div {
+.details {
+   
+}
+
+.details > div > div:last-child {
+    color: grey;
+    opacity: .6;
+}
+
+.details > div {
+    margin: 10px;
 }

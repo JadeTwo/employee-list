@@ -14,7 +14,7 @@ import { id } from './utils/helper';
 
 function App() {
 
-  const [employees, setEmployees] = useState([]);
+  const [employees, setEmployees] = useState(null);
 
   async function getEmployees() {
     try {
