@@ -5,7 +5,7 @@ function random(max) {
 }
 
 export function randomPhoto() {
-    return `./images/headshot${random(12)}.jpeg`
+    return `../images/headshot${random(12)}.jpeg`
 }
 
 export function generateId() {
