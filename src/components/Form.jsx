@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import { randomPhoto, generateId } from "../utils/helper";
+import { randomPhoto, generateId, formatEmail, randomPhoneNumber } from "../utils/helper";
 
 export default function Form({ setEmployees, setShow }) {
 
@@ -18,8 +18,8 @@ export default function Form({ setEmployees, setShow }) {
                 headshot: randomPhoto(),
                 name: name,
                 title: title,
-                email: null,
-                phone: null
+                email: formatEmail(name),
+                phone: randomPhoneNumber()
             };
 
             setEmployees((prevEmployees) => [newEmployee, ...prevEmployees]);

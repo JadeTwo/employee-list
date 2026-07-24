@@ -91,3 +91,24 @@ header a {
     text-decoration: none;
     color: lightblue;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.profile > div {
+}

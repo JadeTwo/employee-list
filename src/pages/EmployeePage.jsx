@@ -24,6 +24,21 @@ export default function EmployeePage({ employees }) {
                     </div>
                 </div>
 
+                <div>
+                    <div>Phone Number</div>
+                    <div>{employee.phone}</div>
+                </div>
+
+                <div>
+                    <div>Email</div>
+                    <div>{employee.email}</div>
+                </div>
+
+                <div>
+                    <div>Employee ID</div>
+                    <div>{employee.id}</div>
+                </div>
+
             </div>
 
         </div>
